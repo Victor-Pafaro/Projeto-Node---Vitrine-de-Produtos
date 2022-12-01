@@ -22,7 +22,7 @@ class ProdutosController
     {
         return function (req, res) {
         const produtoDAO = new dao_PRODUTOS(db);
-        produtoDAO.dadosDoProdutoCamisaBrasil() 
+        produtoDAO.dadosDoProdutoCamisaArgentina() 
         .then(resultado => {
             console.log(resultado);
             res.render('../views/ejs/form-compra-produto-camisa-argentina', { produtos: resultado });

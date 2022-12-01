@@ -19,6 +19,19 @@ class dao_PRODUTOS {
             });
         });
     }
+
+    dadosDoProdutoCamisaArgentina(){
+        return new Promise((resolve,reject) => { 
+            var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Argentina Feminina"';
+            this._db.query(sql, [],function(erro,listagem) {
+            if (erro) {
+                console.log(erro);
+                return reject('Lista de PRODUTOS FALHOU!'); 
+            }
+            resolve(listagem);
+            });
+        });
+    }
 }
 
 module.exports = dao_PRODUTOS;
