@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!--Meta Tags requeridas pelo bootstrap-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Cadastro</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body style="background-color: #330867; color: #fff;">
+    <h1 style="position: fixed-top;">Formulário de Cadastro de Usuario</h1>
+
+    <form method="post" action="/add" style="margin-top:10px ;">
+        <div class=" col-md-5 mb-3">
+          <label for="nomeClie" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nomeClie" name="nomeClie" placeholder="Digite seu nome:">
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="cpfClie" class="form-label" style="font-size: 18px;" >CPF:</label>
+            <input type="text" class="form-control" id="cpfClie" name="cpfClie" placeholder="Digite seu CPF: ">
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="idadeClie" class="form-label" style="font-size: 18px;" >Idade:</label>
+            <input type="text" class="form-control" id="idadeClie" name="idadeClie" placeholder="Digite sua idade: ">
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="emailClie" class="form-label" style="font-size: 18px;" >Email:</label>
+            <input type="email" class="form-control" id="emailClie" name="emailClie" placeholder="Digite seu e-mail ">
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <label for="senhaClie" class="form-label" style="font-size: 18px;" >Senha:</label>
+            <input type="password" class="form-control" id="senhaClie" name="senhaClie" placeholder="Digite sua senha: ">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Salvar</button>
+
+      </form>
+    <a href="/" class="btn btn-success" style="margin-top:5px ;">Voltar para o login</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  </body>
+</html>

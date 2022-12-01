@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <!--Meta Tags requeridas pelo bootstrap-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Produto</title>
+    
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel='stylesheet' href='stylesheets/style.css' />
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top" style="background-color: #789EA0">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color: #FFF; font-weight:bold; padding-left: 60px; font-size: 30px;" href="/quemsou"> Quem sou? </a>
+        <a class="navbar-brand" style="color: #FFF; font-weight:bold; font-size: 30px;" href="/vitrine"> Vitrine de Produtos </a>
+        <a class="navbar-brand" style="color: #FFF; font-weight:bold; padding-right: 60px; font-size: 30px;"  href="/listaPedidos"> Consulta de Pedidos </a>
+      </div>
+    </nav>
+
+    <h1 style="margin-top: 30px;">Compra de Produto</h1>
+
+    <form method="POST" action="/cadastrapedidoargentina">
+        <fieldset disabled>
+          <div class="mb-3 col-md-4">
+            <label for="disabledTextInput" class="form-label">Produto</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Camiseta da Argentina Feminina" name="produtos.nome_produto" value="<%= produtos.nome_produto %>"> 
+          </div>
+        </fieldset>
+
+        <fieldset disabled>
+          <div class="mb-3 col-md-1">
+            <label for="disabledTextInput" class="form-label">Quantidade</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="01" name="<%= produtos.quantidade %>" value="<%= produtos.quantidade %>"> 
+          </div>
+        </fieldset>
+
+        <div  class="mb-3 col-md-1">
+          <label for="inputState" class="form-label">Tamanho</label>
+          <select id="inputState" class="form-select" name="tamanho">
+            <option>PP</option>
+            <option>P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>GG</option>
+          </select>
+        </div>
+
+        <fieldset disabled>
+          <div class="mb-3 col-md-2">
+            <label for="disabledTextInput" class="form-label">Valor Unitario</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="R$220,00" name="<%= produtos.valor_total %>" value="<%= produtos.valor_total %>"> 
+          </div>
+        </fieldset>
+
+        <div class="col-md-4 mb-3">
+          <label for="inputAddress" class="form-label">Data da Compra:</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Digite a data: Ex: 01/01/2023" name="data_emissao" value="<%= produtos.data_emissao %>">
+        </div>
+
+        <fieldset disabled>
+          <div class="mb-3 col-md-2">
+            <label for="disabledTextInput" class="form-label">Frete</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Frete Grátis" name="<%= produtos.nome_produto %>" value="<%= produtos.nome_produto %>"> 
+          </div>
+        </fieldset>
+
+        <div>
+          <p style="font-size: 20px; font-weight: bold;">Forma de pagamento</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Pix
+            </label>
+          </div>
+  
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckChecked">
+              Cartão de crédito
+            </label>
+          </div>
+  
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckChecked">
+              Boleto
+            </label>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Realizar pedido</button>
+        </div>
+    </form>
+
+    <p style="margin-top: 20px;"><a href="/vitrine" >Voltar para a lista de produtos</a></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  </body>
+</html>
