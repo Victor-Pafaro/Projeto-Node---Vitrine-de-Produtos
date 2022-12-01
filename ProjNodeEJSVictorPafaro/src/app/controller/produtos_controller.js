@@ -18,6 +18,33 @@ class ProdutosController
         }
     }
 
+    exibeDadosProdutoCamisaInglaterra()
+    {
+        return function (req, res) {
+        const produtoDAO = new dao_PRODUTOS(db);
+        produtoDAO.dadosDoProdutoCamisaInglaterra() 
+        .then(resultado => {
+            console.log(resultado);
+            res.render('../views/ejs/form-compra-produto-camisa-inglaterra', { produtos: resultado });
+        })
+        .catch(erro =>console.log(erro));
+        }
+    }
+
+
+    exibeDadosProdutoCamisaFranca()
+    {
+        return function (req, res) {
+        const produtoDAO = new dao_PRODUTOS(db);
+        produtoDAO.dadosDoProdutoCamisaFranca() 
+        .then(resultado => {
+            console.log(resultado);
+            res.render('../views/ejs/form-compra-produto-camisa-franca', { produtos: resultado });
+        })
+        .catch(erro =>console.log(erro));
+        }
+    }
+
     exibeDadosProdutoCamisaArgentina()
     {
         return function (req, res) {
@@ -30,6 +57,7 @@ class ProdutosController
         .catch(erro =>console.log(erro));
         }
     }
+
 }
 
 module.exports = ProdutosController;

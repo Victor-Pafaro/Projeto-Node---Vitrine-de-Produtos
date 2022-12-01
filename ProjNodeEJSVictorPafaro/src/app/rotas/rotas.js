@@ -63,13 +63,25 @@ app.get('/vitrine', function(req,res){
 /* Rota para formulario de compra da camisa do Brasil */
 app.get('/compraProdutoCamisaBrasil', produtoControlador.exibeDadosProdutoCamisaBrasil());
 
+/* Rota para formulario de compra da camisa da Inglaterra */
+app.get('/compraProdutoCamisaInglaterra', produtoControlador.exibeDadosProdutoCamisaInglaterra());
+
+/* Rota para formulario de compra da camisa da França */
+app.get('/compraProdutoCamisaFranca', produtoControlador.exibeDadosProdutoCamisaFranca());
+
 /* Rota para formulario de compra da camisa da Argentina */
 app.get('/compraProdutoCamisaArgentina', produtoControlador.exibeDadosProdutoCamisaArgentina());
 
 /* Rota para incluir pedido da camisa do Brasil */
 app.post('/cadastrapedidobrasil', pedidoControlador.incluirPedidosCamisetaBrasil());
 
-/* Rota para incluir pedido da camisa da Argentina */
+/* Rota para incluir pedido da camisa da Inglaterra */
+app.post('/cadastrapedidoinglaterra', pedidoControlador.incluirPedidosCamisetaInglaterra());
+
+/* Rota para incluir pedido da camisa da França */
+app.post('/cadastrapedidofranca', pedidoControlador.incluirPedidosCamisetaFranca());
+
+/* Rota para incluir pedido da camisa do Japão */
 app.post('/cadastrapedidoargentina', pedidoControlador.incluirPedidosCamisetaArgentina());
 
 

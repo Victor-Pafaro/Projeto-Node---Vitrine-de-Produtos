@@ -25,11 +25,11 @@
 
     <h1 style="margin-top: 80px;">Compra de Produto</h1>
 
-    <form method="POST" action="/cadastrapedidoargentina">
+    <form method="POST" action="/cadastrapedidoinglaterra">
         <fieldset disabled>
           <div class="mb-3 col-md-4">
             <label for="disabledTextInput" class="form-label">Produto</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Camiseta da Argentina Feminina" name="produtos.nome_produto" value="<%= produtos.nome_produto %>"> 
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Camiseta da Inglaterra Masculina" name="produtos.nome_produto" value="<%= produtos.nome_produto %>"> 
           </div>
         </fieldset>
 
@@ -52,15 +52,15 @@
         </div>
 
         <fieldset disabled>
-          <div class="mb-3 col-md-2">
+          <div class="mb-3 col-md-1">
             <label for="disabledTextInput" class="form-label">Valor Unitario</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="R$150,00" name="<%= produtos.valor_total %>" value="<%= produtos.valor_total %>"> 
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="R$220,00" name="<%= produtos.valor_total %>" value="<%= produtos.valor_total %>"> 
           </div>
         </fieldset>
 
         <div class="col-md-4 mb-3">
           <label for="inputAddress" class="form-label">Data da Compra:</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Digite a data: Ex: 01/01/2023" name="data_emissao" value="<%= produtos.data_emissao %>">
+          <input type="text" class="form-control" id="inputAddress" placeholder="Ex: 01/01/2023" name="data_emissao" value="<%= produtos.data_emissao %>">
         </div>
 
         <fieldset disabled>

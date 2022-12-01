@@ -20,6 +20,32 @@ class dao_PRODUTOS {
         });
     }
 
+    dadosDoProdutoCamisaInglaterra(){
+        return new Promise((resolve,reject) => { 
+            var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Inglaterra Masculina"';
+            this._db.query(sql, [],function(erro,listagem) {
+            if (erro) {
+                console.log(erro);
+                return reject('Lista de PRODUTOS FALHOU!'); 
+            }
+            resolve(listagem);
+            });
+        });
+    }
+
+    dadosDoProdutoCamisaFranca(){
+        return new Promise((resolve,reject) => { 
+            var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Franca Masculina"';
+            this._db.query(sql, [],function(erro,listagem) {
+            if (erro) {
+                console.log(erro);
+                return reject('Lista de PRODUTOS FALHOU!'); 
+            }
+            resolve(listagem);
+            });
+        });
+    }
+
     dadosDoProdutoCamisaArgentina(){
         return new Promise((resolve,reject) => { 
             var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Argentina Feminina"';

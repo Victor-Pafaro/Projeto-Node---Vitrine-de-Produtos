@@ -36,6 +36,41 @@ class PedidosController
       }
     }
 
+    incluirPedidosCamisetaInglaterra() 
+    {
+      return function(req,res) {
+        const dadosDoForm = req.body;
+        const pedidoDAO = new dao_PEDIDOS(db);
+        pedidoDAO.incluiPedidoCamisetaInglaterra(dadosDoForm)
+          .then((mensagem) => {  
+             console.log(mensagem);
+             res.redirect('/pedidorealizado');
+          })
+          .catch((mensagem) => {  
+             console.log(mensagem);
+             res.send(mensagem);
+          });
+      }
+    }
+
+
+    incluirPedidosCamisetaFranca() 
+    {
+      return function(req,res) {
+        const dadosDoForm = req.body;
+        const pedidoDAO = new dao_PEDIDOS(db);
+        pedidoDAO.incluiPedidoCamisetaFranca(dadosDoForm)
+          .then((mensagem) => {  
+             console.log(mensagem);
+             res.redirect('/pedidorealizado');
+          })
+          .catch((mensagem) => {  
+             console.log(mensagem);
+             res.send(mensagem);
+          });
+      }
+    }
+
     incluirPedidosCamisetaArgentina() 
     {
       return function(req,res) {
