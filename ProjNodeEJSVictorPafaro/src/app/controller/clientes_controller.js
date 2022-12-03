@@ -35,6 +35,8 @@ class ClientesController
       }
     }
 
+    
+
     deletarClientes() 
     {
        return function(req,res) {

@@ -33,8 +33,8 @@ CREATE TABLE PEDIDO(
 CREATE TABLE PRODUTO(
 	id_produto INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     nome_produto VARCHAR(50) NOT NULL,
-    valor_total varchar(40) NOT NULL,
-    data_emissao VARCHAR(10) NOT NULL
+    valor_unitario varchar(40) NOT NULL
+    /*data_emissao VARCHAR(10) NOT NULL*/
 );
 
 CREATE TABLE ITEM_DE_PEDIDO(
@@ -57,18 +57,23 @@ select * from pedido;
 
 select * from produto;
 
-insert into clientes (cpfClie,nomeClie,idadeClie,emailClie) VALUES('121231212', 'Vitoto', 12, 'bv@vb.com');
-
-insert into acesso(emailUSR,senhaUSR) VALUES('vct@vct.com', 123);
-
 /* Inserção dos produtos */
 insert into produto(nome_produto,valor_total, data_emissao) VALUES('Camiseta do Brasil Masculina', '250,00', '04/12/2022');
 
 insert into produto(nome_produto,valor_total, data_emissao) VALUES('Camiseta da Inglaterra Masculina', '220,00', '04/12/2022');
 
-insert into produto(nome_produto,valor_total, data_emissao) VALUES('Camiseta da França Masculina', '150,00', '04/12/2022');
+insert into produto(nome_produto,valor_total, data_emissao) VALUES('Camiseta da França Masculina', '180,00', '04/12/2022');
 
-insert into produto(nome_produto,valor_total, data_emissao) VALUES('Camiseta da Argentina Feminina', '180,00', '04/12/2022');
+insert into produto(nome_produto,valor_total, data_emissao) VALUES('Camiseta da Argentina Feminina', '150,00', '04/12/2022');
+
+/* Inserção dos produtos sem data_emissao */
+insert into produto(nome_produto,valor_unitario) VALUES('Camiseta do Brasil Masculina', '250,00');
+
+insert into produto(nome_produto,valor_unitario) VALUES('Camiseta da Inglaterra Masculina', '220,00');
+
+insert into produto(nome_produto,valor_unitario) VALUES('Camiseta da França Masculina', '180,00');
+
+insert into produto(nome_produto,valor_unitario) VALUES('Camiseta da Argentina Feminina', '150,00');
 
 drop table acesso;
 drop table clientes;

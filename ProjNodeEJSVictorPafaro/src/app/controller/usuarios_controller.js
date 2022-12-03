@@ -6,21 +6,6 @@ var db = require('../../config/database');
 class UsuariosController 
 {
 
- exibeFormAcesso()
-   {
-      return function (req, res) {
-        res.render('ejs/index');   
-      }
-   }
-
-  validaAcesso()
-  {
-    return function (req, res) {
-        res.send('validando o acesso');   
-      }
-
-  }
-
     // somente para abrir a página de acesso
     exibeFormAcesso(sessao) {
         return function (req, res) {

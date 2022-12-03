@@ -24,132 +24,72 @@ class dao_PEDIDOS {
     /**********************  TESTE ***********************/
     incluiPedidoCamisetaBrasil(dados) 
     {
-       return new Promise ((resolve,reject) => 
-       {
-        var erroTabela1 = false;
-        var erroTabela2 = false;
-        var insertTabela1 = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
-           " Camiseta do Brasil Masculina " + "','" + dados.data_emissao + "','" + "01" + "','" 
-           + " R$250,00 " + "','" + " Realizado " + "')";
-        this._db.query(insertTabela1,function(erro) {
-          if (erro) { 
-            erroTabela1 = true;
-            console.log(erro)    
-          }
-          
-        });
-        var insertTabela2 = "INSERT INTO PRODUTO(nome_produto,valor_total, data_emissao) VALUES('" +
-        " Camiseta do Brasil Masculina " + "','" + " R$250,00 " + dados.data_emissao + "')";
-        this._db.query(insertTabela2,function(erro) {
-            if (erro) { 
-              erroTabela2 = true;
-              console.log(erro)    
-            }
-        });
-
-        if ((erroTabela1) || (erroTabela2))
-        return reject('Erro na validação do acesso do usuário');
-        else
-        resolve('Inclusão do cliente foi executada com sucesso');
+      return new Promise ((resolve,reject) => 
+      {
+       var sqlInclui = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
+       " Camiseta do Brasil Masculina " + "','" + dados.data_emissao + "','" + "01" + "','" 
+       + " R$250,00 " + "','" + " Realizado " + "')";
+       this._db.query(sqlInclui,function(erro) {
+         if (erro) { 
+           console.log(erro)
+           return reject('Inclusão do cliente NÃO foi executada com sucesso');
+         }
+         resolve('Inclusão do cliente foi executada com sucesso');
        });
+      });
     }
 
     incluiPedidoCamisetaInglaterra(dados) 
     {
-       return new Promise ((resolve,reject) => 
-       {
-        var erroTabela1 = false;
-        var erroTabela2 = false;
-        var insertTabela1 = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
-           " Camiseta da Inglaterra Masculina " + "','" + dados.data_emissao + "','" + "01" + "','" 
-           + " R$220,00 " + "','" + " Realizado " + "')";
-        this._db.query(insertTabela1,function(erro) {
-          if (erro) { 
-            erroTabela1 = true;
-            console.log(erro)    
-          }
-          
-        });
-        var insertTabela2 = "INSERT INTO PRODUTO(nome_produto,valor_total, data_emissao) VALUES('" +
-        " Camiseta da Inglaterra Masculina " + "','" + " R$220,00 " + dados.data_emissao + "')";
-        this._db.query(insertTabela2,function(erro) {
-            if (erro) { 
-              erroTabela2 = true;
-              console.log(erro)    
-            }
-        });
-
-        if ((erroTabela1) || (erroTabela2))
-        return reject('Erro na validação do acesso do usuário');
-        else
-        resolve('Inclusão do cliente foi executada com sucesso');
+      return new Promise ((resolve,reject) => 
+      {
+       var sqlInclui = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
+       " Camiseta da Inglaterra Masculina " + "','" + dados.data_emissao + "','" + "01" + "','" 
+       + " R$220,00 " + "','" + " Realizado " + "')";
+       this._db.query(sqlInclui,function(erro) {
+         if (erro) { 
+           console.log(erro)
+           return reject('Inclusão do cliente NÃO foi executada com sucesso');
+         }
+         resolve('Inclusão do cliente foi executada com sucesso');
        });
+      });
     }
 
 
 
     incluiPedidoCamisetaFranca(dados) 
     {
-       return new Promise ((resolve,reject) => 
-       {
-        var erroTabela1 = false;
-        var erroTabela2 = false;
-        var insertTabela1 = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
-           " Camiseta da França Masculina " + "','" + dados.data_emissao + "','" + "01" + "','" 
-           + " R$180,00 " + "','" + " Realizado " + "')";
-        this._db.query(insertTabela1,function(erro) {
-          if (erro) { 
-            erroTabela1 = true;
-            console.log(erro)    
-          }
-          
-        });
-        var insertTabela2 = "INSERT INTO PRODUTO(nome_produto,valor_total, data_emissao) VALUES('" +
-        " Camiseta da França Masculina " + "','" + " R$180,00 " + dados.data_emissao + "')";
-        this._db.query(insertTabela2,function(erro) {
-            if (erro) { 
-              erroTabela2 = true;
-              console.log(erro)    
-            }
-        });
-
-        if ((erroTabela1) || (erroTabela2))
-        return reject('Erro na validação do acesso do usuário');
-        else
-        resolve('Inclusão do cliente foi executada com sucesso');
+      return new Promise ((resolve,reject) => 
+      {
+       var sqlInclui = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
+       " Camiseta da França Masculina " + "','" + dados.data_emissao + "','" + "01" + "','" 
+       + " R$180,00 " + "','" + " Realizado " + "')";
+       this._db.query(sqlInclui,function(erro) {
+         if (erro) { 
+           console.log(erro)
+           return reject('Inclusão do cliente NÃO foi executada com sucesso');
+         }
+         resolve('Inclusão do cliente foi executada com sucesso');
        });
+      });
     }
 
     incluiPedidoCamisetaArgentina(dados) 
     {
-       return new Promise ((resolve,reject) => 
-       {
-        var erroTabela1 = false;
-        var erroTabela2 = false;
-        var insertTabela1 = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
-           " Camiseta da Argentina Feminina " + "','" + dados.data_emissao + "','" + "01" + "','" 
-           + " R$150,00 " + "','" + " Realizado " + "')";
-        this._db.query(insertTabela1,function(erro) {
-          if (erro) { 
-            erroTabela1 = true;
-            console.log(erro)    
-          }
-          
-        });
-        var insertTabela2 = "INSERT INTO PRODUTO(nome_produto,valor_total, data_emissao) VALUES('" +
-        " Camiseta da Argentina Feminina " + "','" + " R$150,00 " + dados.data_emissao + "')";
-        this._db.query(insertTabela2,function(erro) {
-            if (erro) { 
-              erroTabela2 = true;
-              console.log(erro)    
-            }
-        });
-
-        if ((erroTabela1) || (erroTabela2))
-        return reject('Erro na validação do acesso do usuário');
-        else
-        resolve('Inclusão do cliente foi executada com sucesso');
+      return new Promise ((resolve,reject) => 
+      {
+       var sqlInclui = "INSERT INTO PEDIDO (descricao_produto,data_emissao,quantidade,valor_total,status_pedido) VALUES('" +
+       " Camiseta da Argentina Feminina " + "','" + dados.data_emissao + "','" + "01" + "','" 
+       + " R$150,00 " + "','" + " Realizado " + "')";
+       this._db.query(sqlInclui,function(erro) {
+         if (erro) { 
+           console.log(erro)
+           return reject('Inclusão do cliente NÃO foi executada com sucesso');
+         }
+         resolve('Inclusão do cliente foi executada com sucesso');
        });
+      });
     }
 
 
@@ -203,14 +143,13 @@ class dao_PEDIDOS {
          });
      }
     
-    /*Tentando com SQL Injection 
+    /*Tentativa com SQL Injection
     incluiClientes(dados) 
     {
        return new Promise ((resolve,reject) => 
        {
         var sqlInclui = 'INSERT INTO CLIENTES(nomeClie,cpfClie,idadeClie,emailClie) VALUES(?,?,?,?)';
-        this._db.query(sqlInclui,[require.body.nomeClie, require.body.cpfClie, require.body.idadeClie, 
-                      require.body.emailClie],function(erro) {
+        this._db.query(sqlInclui,[nomeClie, cpfClie, idadeClie, emailClie],function(erro) {
           if (erro) { 
             console.log(erro)
             return reject('Inclusão do cliente NÃO foi executada com sucesso');
@@ -220,8 +159,6 @@ class dao_PEDIDOS {
        });
     }
     */
-
-
 }
 
 module.exports = dao_PEDIDOS;

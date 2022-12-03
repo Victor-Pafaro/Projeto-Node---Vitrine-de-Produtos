@@ -26,12 +26,13 @@ app.use((req, res, next) => {
 var sessao; 
 
 
-/************************************************/
+/********************************* ROTAS ****************************/
 
+
+// Rota para exibir pagina de login 
 app.get('/', usuarioControlador.exibeFormAcesso(sessao))
 
-app.post('/validaAcesso', usuarioControlador.validaAcesso())
-
+// Rota que faz a validação do usuario
 app.post('/validaBDUsuarios',usuarioControlador.exibeResultadoValidacaoAcesso());
 
 /* Rota para página de cadastro de usuario */
@@ -39,7 +40,7 @@ app.get('/add', function(req,res){
   res.render('../views/ejs/form-cadastro');
 })
 
-/* Rota para receber os dados de cadastro de cliente*/
+/* Rota para receber os dados de cadastro de cliente e usuario*/
 app.post('/add', clienteControlador.incluirClientes())
 
 // Rota para listagem de clientes
@@ -95,14 +96,12 @@ app.get('/listaPedidos', pedidoControlador.exibeDadosPedido());
 
 
 /* Rota para buscar o pedido para edição */
-app.get('/pedidos/consultaPorNumero/:numero_pedido',pedidoControlador.consultarPorNumeroPedido());
+// app.get('/pedidos/consultaPorNumero/:numero_pedido',pedidoControlador.consultarPorNumeroPedido());
 
 /* Rota para receber os dados do form de edição de pedido */
-app.post('/pedidos/consultaPorNumero/:numero_pedido', pedidoControlador.atualizarPedido());
+// app.post('/pedidos/consultaPorNumero/:numero_pedido', pedidoControlador.atualizarPedido());
 
 /* Rota para deletar um pedido */
 app.get('/pedidos/deletar/:numero_pedido',pedidoControlador.deletarPedidos());
-
-
 
 };  // end principal

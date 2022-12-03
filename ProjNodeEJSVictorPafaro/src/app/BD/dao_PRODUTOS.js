@@ -8,8 +8,22 @@ class dao_PRODUTOS {
     }
 
     dadosDoProdutoCamisaBrasil(){
+        /* Com valor_total
         return new Promise((resolve,reject) => { 
             var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta do Brasil Masculina"';
+            this._db.query(sql, [],function(erro,listagem) {
+            if (erro) {
+                console.log(erro);
+                return reject('Lista de PRODUTOS FALHOU!'); 
+            }
+            resolve(listagem);
+            });
+        });
+        */
+
+        // sem valor total
+        return new Promise((resolve,reject) => { 
+            var sql = 'SELECT nome_produto, valor_unitario FROM PRODUTO WHERE nome_produto = "Camiseta do Brasil Masculina"';
             this._db.query(sql, [],function(erro,listagem) {
             if (erro) {
                 console.log(erro);
@@ -22,7 +36,7 @@ class dao_PRODUTOS {
 
     dadosDoProdutoCamisaInglaterra(){
         return new Promise((resolve,reject) => { 
-            var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Inglaterra Masculina"';
+            var sql = 'SELECT nome_produto, valor_unitario FROM PRODUTO WHERE nome_produto = "Camiseta da Inglaterra Masculina"';
             this._db.query(sql, [],function(erro,listagem) {
             if (erro) {
                 console.log(erro);
@@ -35,7 +49,7 @@ class dao_PRODUTOS {
 
     dadosDoProdutoCamisaFranca(){
         return new Promise((resolve,reject) => { 
-            var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Franca Masculina"';
+            var sql = 'SELECT nome_produto, valor_unitario FROM PRODUTO WHERE nome_produto = "Camiseta da Franca Masculina"';
             this._db.query(sql, [],function(erro,listagem) {
             if (erro) {
                 console.log(erro);
@@ -48,7 +62,7 @@ class dao_PRODUTOS {
 
     dadosDoProdutoCamisaArgentina(){
         return new Promise((resolve,reject) => { 
-            var sql = 'SELECT nome_produto, valor_total FROM PRODUTO WHERE nome_produto = "Camiseta da Argentina Feminina"';
+            var sql = 'SELECT nome_produto, valor_unitario FROM PRODUTO WHERE nome_produto = "Camiseta da Argentina Feminina"';
             this._db.query(sql, [],function(erro,listagem) {
             if (erro) {
                 console.log(erro);

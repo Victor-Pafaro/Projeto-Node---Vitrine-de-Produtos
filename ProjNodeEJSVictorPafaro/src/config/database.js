@@ -1,15 +1,23 @@
 const mysql = require('mysql2');
 
+/* Conectar ao servidor localhost
 const connection = mysql.createConnection({
         host     : 'localhost',
         user     : 'root',
-        password : '94390361vV.',
+        password : '',
         database : 'VITRINE_PRODUTOS'
-        //host     : 'localhost',
-        //user     : 'root',
-        //password : '',
-        //database : 'marcia'
 });
+
+*/
+
+// Conectar ao servidor regulus
+const connection = mysql.createConnection({
+        host     : 'regulus.cotuca.unicamp.br',
+        user     : 'BD21119',
+        password : 'BD21119',
+        database : 'BD21119'
+});
+
 
 connection.connect(function(err) {
     if (err) throw err;
